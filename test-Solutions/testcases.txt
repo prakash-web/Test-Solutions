@@ -1,0 +1,39 @@
+Test Cases:
+
+1)     ok(divide( 4, 2 ), 2, 'Expected 2 as the result, the result was: ' + divide( 4, 2 ));
+
+2)     ok(reverseString(abc), cba, 'Expected cba as the result, the result was: ' + reverseString(abc));
+
+3)     ok(findMinValue(min=[3, 5, 7, 20,01, -1.1, 12, 0.18, 12] ), -1.1, 'Expected -1.1 as the result, the   result was: ' + (min=[3, 5, 7, 20,01, -1.1, 12,0.18, 12] ));
+
+4)     ok(findDistinctValues(dup=[3, 5, 7, 20, .18, 01, -1.1, 12, Infinity, Infinity, 0.18, -1.1, 12] ), unique=[3,5,7,01,20,0.18,01,-1.1,12, Infinity], 'Expected unique=[3,5,7,01,20,0.18,01,-1.1,12, Infinity] as the result, the result was: ' + findDistinctValues(dup=[3, 5, 7, 20, .18, 01, -1.1, 12, Infinity, Infinity, 0.18, -1.1, 12] ));
+
+5)    ok(doFIZZBUZZ( ), 'from 1 to 100 if the number divide 3 and 5 the result is "FizzBuzz" else if the number divide 3 the result is "Fizz" else the number divide "Buzz" else the number displayed in the console);
+
+6)    ok(removeFruits(fruits, fruitsremove), arr=['orange', 'kiwi', 'pear', 'plum', 'strawberry'], 'Expected arr as result and fruits=['apple', 'banana', 'orange', 'kiwi', 'pear', 'plum', 'strawberry'] and fruitsremove=['apple', 'banana']: ' + removeFruits(fruits, fruitsremove));
+
+7)    ok(pushOntoArray(array, toPush), array, 'Expected array as the result, if toPush=[1,2,3,4,5] and returns array=[1,2,3,4,5]' + pushOntoArray(array, toPush));
+
+8)   ok(splitListStrUsingComma(John,Doe), John Doe , 'Expected John Doe as the result, the result was: ' + splitListStrUsingComma(John,Doe));
+
+9)  ok(sum( ), 6, 'Expected 6 as the result, the runtime arguments are 4 and 2: ' + sum( ));
+
+10) ok(isOnlyWhitespace('  '), True, 'Expected True as the result, the result was: ' + isOnlyWhitespace(' '));
+
+
+11) example of javascript closure
+
+12) create a json Object
+
+13) create dataset array that contains the data and using JQuery ready function we can add rows and columns. Finally we can return the data to Json Obj
+
+14) Programatically creation of div and select
+
+15) different JQuery selectors
+
+16) Progrmatically create array and display in unorder list
+
+17) Create dynamically checkboxes and create two links on click of the checked link all checkboxes are checked and unchecked link all checkboxes are unchecked
+  
+
+

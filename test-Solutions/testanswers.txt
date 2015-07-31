@@ -1,0 +1,336 @@
+1)correct url's for qunit 
+https://cdnjs.cloudflare.com/ajax/libs/qunit/1.16.0/qunit.css
+https://cdnjs.cloudflare.com/ajax/libs/qunit/1.16.0/qunit.js
+https://cdnjs.cloudflare.com/ajax/libs/qunit/1.16.0/qunit.min.css
+https://cdnjs.cloudflare.com/ajax/libs/qunit/1.16.0/qunit.min.js
+
+2)jsanddom.js changes
+
+1) if(b!=0)
+    return a/b;
+   else
+   return false;
+
+
+2) String Reversal
+
+   return str.split('').reverse().join('');
+
+3) Min value of array
+
+   var len=values.length;
+
+   for(var j=1;i<len;i++)
+   {
+      values[0]= Math.min(values[0],values[j]);
+     }
+
+   return values[0];
+
+4) Distinct Values
+
+function duplicate(dup)
+{
+var unique=[];
+unique[0]=dup[0];
+for(var i=1;i<dup.length;i++)
+{
+  var k=0;
+  for(var j=0;j<unique.length;j++)
+  {
+    if(unique[j]==dup[i])
+	{
+	  k++;
+	}
+  }
+  if(k==0)
+	{
+	  unique.push(dup[i]);
+	}
+}
+return unique;
+}
+
+5)  function doFizzBuzz()
+{
+var a=[];
+for(var i=1;i<=100;i++)
+{
+  a[i-1]=i;
+}
+for(var i=0;i<100;i++)
+{
+  if(a[i]%3==0 && a[i]%5==0)
+   { 
+   a[i]="FizzBuzz";
+   }
+  else if (a[i]%3==0)
+  {
+    a[i]="FIZZ";
+  }
+  else if (a[i]%5==0)
+  {
+    a[i]="Buzz";
+  }
+}
+console.log(a);
+}
+
+
+6) remove fruits
+var arr=[];
+for(var i=0;i<fruits.length;i++)
+{
+ var k=0;
+  for(var j=0;j<fruitstoremove.length;j++)
+  {
+    if(fruitstoremove[j]==fruits[i])
+	{
+	 k++;
+	}
+ }
+ if(k==0)
+ {
+ arr.push(fruits[i]);
+ }
+}
+return arr;
+}
+
+7) pushontoarray
+
+       function pushOntoArray(array, toPush) {
+         if(Array.isArray(toPush))
+ 		{
+  		for(var i=0;i<toPush.length;i++)
+  			{
+   			array.push(toPush[i]);
+  			}
+ 		}
+	else {
+		array.push(toPush);
+		}
+     }
+   return toPush;
+8) Split
+     function splitListStrUsingComma(sourceStr) {
+         var a=sourceStr.length;
+         var arr=[];
+        if(a!=0)
+         {
+	   arr=sourceStr.split(",");
+          }
+	return arr;
+    
+9)  sum
+
+    function sum() {
+	var total = 0;
+     for (var i = 0; i < arguments.length; i++){
+     total += parseFloat( arguments[i] );
+     }
+     return total;
+
+     } 
+
+10)  whitespaces
+   function isOnlyWhitespace(sourceStr) {
+    if (/\s/.test(sourceStr)) {
+    	return true;
+	} 
+     else
+	{
+	return false;
+	}
+
+11) javascript Closure
+   Counting with a local variable
+
+<button type="button" onclick="myFunction()">Count!</button>
+<p id="demo">0</p>
+<script>
+var add = (function () {
+    var counter = 0;
+    return function () {return counter += 1;}
+})();
+
+function myFunction(){
+    document.getElementById("demo").innerHTML = add();
+}
+    }
+
+12) json obj creation
+   
+  var text = '{"employees":['+{"firstName":"John","lastName":"Doe" , "city":"Austin","state":" texas","home":"55","work":"31", "Phone Numbers":{"Mobile":" ", "work": " ", "home": " "}}]}';
+
+obj = JSON.parse(text);
+
+13) DataTables
+
+   var dataSet = [
+    ['Trident','Internet Explorer 4.0','Win 95+','4','X'],
+    ['Trident','Internet Explorer 5.0','Win 95+','5','C'],
+    ['Trident','Internet Explorer 5.5','Win 95+','5.5','A'],
+    ['Trident','Internet Explorer 6','Win 98+','6','A'],
+    ['Trident','Internet Explorer 7','Win XP SP2+','7','A']];
+
+
+$(document).ready(function() {
+    $('#demo').html( '<table cellpadding="0" cellspacing="0" border="0" class="display" id="example"></table>' );
+ /*add Columns */
+    $('#example').dataTable( {
+        "data": dataSet,
+        "columns": [
+            { "title": "Engine" },
+            { "title": "Browser" },
+            { "title": "Platform" },
+            { "title": "Version", "class": "center" },
+            { "title": "Grade", "class": "center" }
+        ]
+    } );   
+ /*add rows*/
+var t = $('#example').DataTable();
+    var counter = 1;
+ 
+    $('#addRow').on( 'click', function () {
+        t.row.add( [
+            counter +'.1',
+            counter +'.2',
+            counter +'.3',
+            counter +'.4',
+            counter +'.5'
+        ] ).draw();
+ 
+        counter++;
+    } );
+ 
+    $('#addRow').click();
+} );
+
+/* get the data and returns Json Obj */
+
+var table = $('#example').DataTable( {
+    ajax: "data.json"
+} );
+ 
+table.on( 'xhr', function () {
+    var json = table.ajax.json();
+    
+} );
+
+
+14)   progrmatically create select and click event
+
+      $(document).ready(function(){
+ $('#mydiv').append('<select id="form1"/>');
+ $('#form1').append('<option value="volvo">Volvo</option>');
+ $('#form1').append('<option value="benz">Benz</option>');
+ $('#form1').append('<option value="cruze">Cruze</option>');
+ $('#mydiv').append('<button id="display">Display</button>');
+ $("#display").click(function(){
+  console.log($("#form1").val());
+ });
+});
+
+15)  Write 5 different jQuery selectors
+
+     $("a[target='_blank']")-Selects all <a> elements with a target attribute value equal to"blank"
+     $("#id")- selects with id
+     $(".class")- selects with class
+     $(this) - using this operator
+     $("a[target!='_blank']")-Selects all <a> elements with a target attribute value NOT equal to "_blank"	
+    
+
+16)  Progrmatically create array and display in unorder list
+
+    <html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+var arr=[];
+ $("#Add").click(function(){
+   var a=$('#num').val();
+   arr.push(a);
+ });
+ $("#display").click(function(){
+  for(var i=0;i<arr.length;i++)
+  {
+  $('#list1').append('<li>'+arr[i]+'</li>');  
+  }
+ });
+});
+</script>
+</head>
+<body>
+<input type="text" id="num"/>
+<button id="Add">Add</button>
+<ul id="list1"></ul>
+<button id="display">Display List</button>
+</body>
+</html>
+
+17)  checked and unchecked in javascript
+
+<html>
+<head>
+<script type="text/javascript">
+function myfunction()
+{
+var checkbox = document.createElement('input');
+checkbox.type = "checkbox";
+checkbox.name = "nam";
+checkbox.value = "value";
+checkbox.id = "id0";
+document.getElementById("foobar").appendChild(checkbox);
+var checkbox = document.createElement('input');
+checkbox.type = "checkbox";
+checkbox.name = "nam";
+checkbox.value = "value";
+checkbox.id = "id1";
+document.getElementById("foobar").appendChild(checkbox);
+var brek=document.createElement('br');
+document.getElementById("foobar").appendChild(brek);
+var a = document.createElement('a');
+var linkText = document.createTextNode("checked");
+a.appendChild(linkText);
+document.getElementById("foobar").appendChild(a);
+var bre=document.createElement('br');
+document.getElementById("foobar").appendChild(bre);
+var b = document.createElement('a');
+var linkText1 = document.createTextNode("unchecked");
+b.appendChild(linkText1);
+document.getElementById("foobar").appendChild(b);
+a.addEventListener('click', check);
+b.addEventListener('click', uncheck);
+}
+</script>
+<script type="text/javascript">
+function check()
+{
+var inputElems = document.getElementsByTagName("input"),
+count = 0;
+for (var i=0; i<inputElems.length; i++) {
+if (inputElems[i].type === "checkbox") 
+{
+ inputElems[i].checked = true;   
+}
+}
+}
+function uncheck()
+{
+var inputElems = document.getElementsByTagName("input"),
+count = 0;
+for (var i=0; i<inputElems.length; i++) {
+if (inputElems[i].type === "checkbox") 
+{
+ inputElems[i].checked = false;   
+}
+} ;
+}
+</script>
+</head>
+<body onload="myfunction()">
+<div id="foobar"/>
+</body>
+</html>
